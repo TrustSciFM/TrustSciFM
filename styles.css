@@ -76,12 +76,35 @@ body {
     transition: 0.3s;
 }
 
-/* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    background-image: url('images/background.png');
+    background-size: cover;
+    background-position: center;
     color: white;
     padding: 120px 0 80px;
     text-align: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Gray transparent overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(50, 50, 50, 0.5); /* Gray with 50% opacity. Adjust as needed */
+    z-index: 2;
+    pointer-events: none; /* Allow clicks to pass through */
+}
+
+/* Make sure hero content is above the overlay */
+.hero > * {
+    position: relative;
+    z-index: 3;
 }
 
 .hero-title {
@@ -92,7 +115,11 @@ body {
 }
 
 .highlight {
-    color: #fbbf24;
+    background: linear-gradient(90deg, #f7ce3e 0%, #f5f7fa 100%);
+    color: #2d2d2d; 
+    padding: 0 6px;
+    border-radius: 4px;
+    font-weight: bold;
 }
 
 .hero-subtitle {

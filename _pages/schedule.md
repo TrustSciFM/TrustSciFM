@@ -230,4 +230,4 @@ Registration details will be announced soon. Both in-person and virtual attendan
     color: #6c757d;
     margin-bottom: 3px;
 }
-</style> 
+</style>

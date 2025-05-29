@@ -70,19 +70,27 @@ For general questions about the workshop, please contact:
 ## Specific Inquiries
 
 ### Paper Submissions
+
 For questions about paper submissions, review process, or technical issues:
+
 - **Contact:** Xiangliang Zhang ([xzhang33@nd.edu](mailto:xzhang33@nd.edu))
 
 ### Keynote Speakers & Program
+
 For questions about the workshop program, speakers, or schedule:
+
 - **Contact:** Dawn Song ([dawnsong@cs.berkeley.edu](mailto:dawnsong@cs.berkeley.edu))
 
 ### Registration & Logistics
+
 For questions about registration, venue, or logistics:
+
 - **Contact:** Wei Wang ([weiwang@cs.ucla.edu](mailto:weiwang@cs.ucla.edu))
 
 ### Industry Partnerships
+
 For industry collaboration and sponsorship opportunities:
+
 - **Contact:** Ibrahim Alabdulmohsin ([ibomohsin@google.com](mailto:ibomohsin@google.com))
 
 ---
@@ -91,8 +99,8 @@ For industry collaboration and sponsorship opportunities:
 
 Stay updated with the latest workshop news:
 
-- **Twitter/X:** [@TrustSciFM2025](https://twitter.com/TrustSciFM2025) *(coming soon)*
-- **LinkedIn:** [Workshop Page](https://linkedin.com/company/trustscifm) *(coming soon)*
+- **Twitter/X:** [@TrustSciFM2025](https://twitter.com/TrustSciFM2025) _(coming soon)_
+- **LinkedIn:** [Workshop Page](https://linkedin.com/company/trustscifm) _(coming soon)_
 
 ---
 
@@ -111,10 +119,12 @@ Subscribe to our mailing list for important updates:
 ## Workshop Venue
 
 **NeurIPS 2025**  
-*Location and venue details will be announced closer to the conference date.*
+_Location and venue details will be announced closer to the conference date._
 
 ### Virtual Participation
+
 The workshop will support virtual attendance with:
+
 - Live streaming of all sessions
 - Interactive Q&A platform
 - Virtual poster sessions
@@ -206,4 +216,4 @@ The workshop will support virtual attendance with:
     color: #007bff;
     font-weight: 500;
 }
-</style> 
+</style>

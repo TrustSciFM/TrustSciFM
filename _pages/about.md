@@ -39,7 +39,7 @@ A core deliverable of this workshop will be a **collaborative white paper**, ser
 
 ## Paper Submission
 
-To foster interdisciplinary research on SciFMs, we invite authors from all disciplines (e.g., *ML, NLP, CV, Data Mining, Chemistry, Biology, Physics, Social Sciences*). This workshop will explore both the *development of novel models* and the *trustworthiness of existing ones*. The workshop includes three paper tracks: **Main Paper Track**, **Position Paper Track**, and **Demo Paper Track**.
+To foster interdisciplinary research on SciFMs, we invite authors from all disciplines (e.g., _ML, NLP, CV, Data Mining, Chemistry, Biology, Physics, Social Sciences_). This workshop will explore both the _development of novel models_ and the _trustworthiness of existing ones_. The workshop includes three paper tracks: **Main Paper Track**, **Position Paper Track**, and **Demo Paper Track**.
 
 ### Topics of Interest
 
@@ -56,4 +56,4 @@ To foster interdisciplinary research on SciFMs, we invite authors from all disci
 
 **Virtual Attendance:** The workshop will support virtual participation via live-streamed sessions and an interactive platform. Remote attendees can join Q&A, engage in panel discussions, and explore posters. Session recordings will be available post-event.
 
-*Detailed schedule will be announced soon.*
+_Detailed schedule will be announced soon._

@@ -1,9 +1,10 @@
 ---
-layout: default
-permalink: /blog/
+layout: blog
 title: blog
-nav: true
-nav_order: 1
+permalink: /blog/
+description: A simple whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+nav: false
+nav_order: 6
 pagination:
   enabled: true
   collection: posts

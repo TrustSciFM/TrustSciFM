@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2016-01-15 07:59:00-0400
+date: 2024-12-05 14:30:00-0500
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement with Markdown emoji! :sparkles: :smile:
+📝 Call for Papers now open! We welcome submissions across three tracks: Main Papers, Position Papers, and Demo Papers. Submission deadline: TBD.

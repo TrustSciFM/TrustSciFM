@@ -239,4 +239,180 @@ const additionalStyles = `
 // Inject additional styles
 const styleSheet = document.createElement('style');
 styleSheet.textContent = additionalStyles;
-document.head.appendChild(styleSheet); 
+document.head.appendChild(styleSheet);
+
+// Add scroll progress indicator
+const progressBar = document.createElement('div');
+progressBar.className = 'scroll-progress';
+document.body.appendChild(progressBar);
+
+window.addEventListener('scroll', () => {
+    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (window.scrollY / windowHeight) * 100;
+    progressBar.style.width = scrolled + '%';
+});
+
+// Add floating effect to schedule items
+const scheduleItems = document.querySelectorAll('.schedule-item');
+scheduleItems.forEach((item, index) => {
+    item.style.animation = `float 3s ease-in-out ${index * 0.2}s infinite`;
+});
+
+// Add CSS for new animations
+const newStyles = `
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+
+    .scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #2dd4bf, #0ea5e9);
+        z-index: 9999;
+        transition: width 0.2s ease-out;
+    }
+
+    .speaker-card img, .organizer-card img {
+        transition: transform 0.3s ease-out;
+    }
+
+    .speaker-card img:hover, .organizer-card img:hover {
+        transform: scale(1.05);
+    }
+
+    .schedule-item {
+        animation: float 3s ease-in-out infinite;
+        animation-play-state: paused;
+    }
+
+    .schedule-item:hover {
+        animation-play-state: running;
+    }
+`;
+
+// Add new styles to the existing stylesheet
+styleSheet.textContent += newStyles;
+
+// Add smooth reveal animation for sections
+const revealSections = document.querySelectorAll('section');
+const revealOptions = {
+    threshold: 0.15,
+    rootMargin: '0px'
+};
+
+const revealCallback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('section-revealed');
+            observer.unobserve(entry.target);
+        }
+    });
+};
+
+const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
+revealSections.forEach(section => {
+    section.classList.add('section-hidden');
+    revealObserver.observe(section);
+});
+
+// Add section reveal styles
+const revealStyles = `
+    .section-hidden {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 1s ease-out;
+    }
+
+    .section-revealed {
+        opacity: 1;
+        transform: translateY(0);
+    }
+`;
+
+styleSheet.textContent += revealStyles;
+
+// Add particle background effect to hero section
+const createParticleBackground = () => {
+    const hero = document.querySelector('.hero');
+    const canvas = document.createElement('canvas');
+    canvas.className = 'particle-background';
+    hero.appendChild(canvas);
+
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    const resizeCanvas = () => {
+        canvas.width = hero.offsetWidth;
+        canvas.height = hero.offsetHeight;
+    };
+
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.size = Math.random() * 2 + 1;
+            this.speedX = Math.random() * 2 - 1;
+            this.speedY = Math.random() * 2 - 1;
+        }
+
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+
+            if (this.x > canvas.width) this.x = 0;
+            if (this.x < 0) this.x = canvas.width;
+            if (this.y > canvas.height) this.y = 0;
+            if (this.y < 0) this.y = canvas.height;
+        }
+
+        draw() {
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+
+    const initParticles = () => {
+        particles = [];
+        for (let i = 0; i < 50; i++) {
+            particles.push(new Particle());
+        }
+    };
+
+    const animate = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(particle => {
+            particle.update();
+            particle.draw();
+        });
+        requestAnimationFrame(animate);
+    };
+
+    initParticles();
+    animate();
+};
+
+createParticleBackground();
+
+// Add particle background styles
+const particleStyles = `
+    .particle-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        pointer-events: none;
+    }
+`;
+
+styleSheet.textContent += particleStyles; 
